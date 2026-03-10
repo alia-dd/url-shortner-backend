@@ -8,14 +8,13 @@ import (
 	"github.com/gin-gonic/gin/binding"
 )
 
-var route = gin.Default()
-
 type LongUrl struct {
 	Url string `json:"url" binding:"required"`
 }
 
 func ApiHandler() {
-
+	gin.SetMode(gin.ReleaseMode)
+	var route = gin.Default()
 	route.POST("/shorten", postLong)
 	route.GET("/:alias", getAlias)
 	route.Run(":8000")
