@@ -1,8 +1,8 @@
 package shortner
 
 import (
-	"url-shortener/api"
-	"url-shortener/model"
+	"url-shortner-backend/api"
+	"url-shortner-backend/model"
 )
 
 func UrlShorner() {

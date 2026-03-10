@@ -1,7 +1,7 @@
 package main
 
 import (
-	"url-shortener/shortner"
+	"url-shortner-backend/shortner"
 )
 
 func main() {

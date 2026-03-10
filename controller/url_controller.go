@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"strconv"
-	"url-shortener/schema"
+	"url-shortner-backend/schema"
 
 	"gorm.io/gorm"
 )

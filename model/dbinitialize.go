@@ -3,7 +3,7 @@ package model
 import (
 	"log"
 	"os"
-	"url-shortener/schema"
+	"url-shortner-backend/schema"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"

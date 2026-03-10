@@ -2,7 +2,7 @@ package api
 
 import (
 	"net/http"
-	"url-shortener/controller"
+	"url-shortner-backend/controller"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
