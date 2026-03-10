@@ -1,4 +1,4 @@
-package model
+package initializer
 
 import (
 	"log"
@@ -22,7 +22,7 @@ func InitDB() {
 	dsn := os.Getenv("DATABASE_URL")
 	dbconnection, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		panic("failed to connect to Database")
+		log.Fatal("failed to connect to Database")
 	}
 	schema.DBConnect.DB = dbconnection
 	dbconnection.AutoMigrate(&schemaM)

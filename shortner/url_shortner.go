@@ -2,10 +2,11 @@ package shortner
 
 import (
 	"url-shortner-backend/api"
-	"url-shortner-backend/model"
+	"url-shortner-backend/initializer"
 )
 
 func UrlShorner() {
-	model.InitDB()
+	initializer.LoadEnv()
+	initializer.InitDB()
 	api.ApiHandler()
 }
