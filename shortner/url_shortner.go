@@ -6,7 +6,7 @@ import (
 )
 
 func UrlShorner() {
-	// initializer.LoadEnv()
+	initializer.LoadEnv()
 	initializer.InitDB()
 	api.ApiHandler()
 }
