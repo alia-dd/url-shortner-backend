@@ -17,7 +17,7 @@ func ApiHandler() {
 	var route = gin.Default()
 	route.POST("/shorten", postLong)
 	route.GET("/:alias", getAlias)
-	route.Run(":8000")
+	route.Run("http://localhost:8000")
 }
 
 func postLong(c *gin.Context) {
