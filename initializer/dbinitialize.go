@@ -20,6 +20,9 @@ import (
 func InitDB() {
 	schemaM := schema.Url_Data{}
 	dsn := os.Getenv("DATABASE_URL")
+	if dsn == "" {
+		log.Fatal("DATABASE_URL not set")
+	}
 	dbconnection, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal("failed to connect to Database")
