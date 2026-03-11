@@ -1,7 +1,9 @@
 package api
 
 import (
+	"log"
 	"net/http"
+	"os"
 	"url-shortner-backend/controller"
 
 	"github.com/gin-gonic/gin"
@@ -13,11 +15,18 @@ type LongUrl struct {
 }
 
 func ApiHandler() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
+
 	gin.SetMode(gin.ReleaseMode)
 	var route = gin.Default()
+
 	route.POST("/shorten", postLong)
 	route.GET("/:alias", getAlias)
-	route.Run("http://localhost:8000")
+	log.Println("Server running on port", port)
+	route.Run(":" + port)
 }
 
 func postLong(c *gin.Context) {
