@@ -40,8 +40,11 @@ func postLong(c *gin.Context) {
 		c.String(400, `provide correct url.`)
 		return
 	}
-	c.String(http.StatusOK, alias)
+	c.JSON(http.StatusOK, gin.H{
+		"alias": alias,
+	})
 }
+
 func getAlias(c *gin.Context) {
 	alias := c.Param("alias")
 	// if exist,_,_ := controller.Checkifexist("Short_url",alias); exist{
