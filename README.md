@@ -102,16 +102,6 @@ Before you begin, make sure you have the following installed:
 
 ---
 
-## 🧠 How It Works
-
-1. The client sends a long URL to the `POST /api/shorten` endpoint.
-2. The service generates a unique alias (short code).
-3. The mapping is stored in the database.
-4. When someone accesses the short code in a browser, the server looks it up and redirects to the original URL.
-
-
----
-
 ## 📦 Deployment
 
 If you wish to use this backend server in your project you can deploy on rendar.
