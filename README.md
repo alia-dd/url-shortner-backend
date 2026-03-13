@@ -64,7 +64,7 @@ Before you begin, make sure you have the following installed:
    ```
 
    The API will start on `http://localhost:8080` (or the port you set).
-
+    or use the already hosted backedn  `https://url-shortner-backend-36xa.onrender.com`
 ---
 
 ## 📌 API Endpoints
